@@ -1,0 +1,13 @@
+#!/bin/bash
+
+input=$1
+
+if [ $input == "." ]
+	then
+		input=`pwd`
+fi
+
+var=`echo $input | awk '{print index($0,"http")}'`
+url="http://local.dev/${input:($var+4)}"
+
+open $url

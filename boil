@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+red='\033[1;31m'
+green='\033[1;32m'
+cyan='\033[1;36m'
+NC='\033[0m' # No Color
+
+case "$1" in
+	angular)
+		shopt -s dotglob
+		cp -an $HTTP/_libs/angular/angular-boilerplate/* `pwd`
+		shopt -u dotglob
+		rm -R ".git"
+		echo -e "${green}Boiled Angular template${NC}"
+		;;
+	 
+	api)
+		cp -an $HTTP/_libs/laravel/laravel-api `pwd`
+		rm -R ".git"
+		rm ".gitignore"
+		echo -e "${green}Boiled API template${NC}"
+		;;
+	 
+	*)
+		echo -e "\n\tCopies boilerplates from ${cyan}$HTTP/_libs${NC}"
+		echo -e "\tUsage: { ${green}angular${NC} | ${green}api${NC} }\n"
+		exit 1
+
+esac
