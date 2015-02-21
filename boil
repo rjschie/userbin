@@ -17,6 +17,7 @@ case "$1" in
 	 
 	api)
 		sudo cp -an /Users/ryanschie/_Web/http/_libs/laravel/laravel-api `pwd`
+		sudo mv laravel-api api
 		sudo rm -R "./api/.git"
 		sudo rm "./api/.gitignore"
 		echo -e "${green}Boiled API template${NC}"
