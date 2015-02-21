@@ -9,16 +9,16 @@ NC='\033[0m' # No Color
 case "$1" in
 	angular)
 		shopt -s dotglob
-		cp -an $HTTP/_libs/angular/angular-boilerplate/* `pwd`
+		sudo cp -an /Users/ryanschie/_Web/http/_libs/angular/angular-boilerplate/* `pwd`
 		shopt -u dotglob
-		rm -R ".git"
+		sudo rm -R ".git"
 		echo -e "${green}Boiled Angular template${NC}"
 		;;
 	 
 	api)
-		cp -an $HTTP/_libs/laravel/laravel-api `pwd`
-		rm -R ".git"
-		rm ".gitignore"
+		sudo cp -an /Users/ryanschie/_Web/http/_libs/laravel/laravel-api `pwd`
+		sudo rm -R "./api/.git"
+		sudo rm "./api/.gitignore"
 		echo -e "${green}Boiled API template${NC}"
 		;;
 	 
