@@ -22,6 +22,13 @@ case "$1" in
 		sudo rm "./api/.gitignore"
 		echo -e "${green}Boiled API template${NC}"
 		;;
+
+	php)
+		shopt -s dotglob
+		sudo cp -an /Users/ryanschie/_Web/http/_libs/general/php-boilerplate/* `pwd`
+		shopt -u dotglob
+		echo -e "${green}Boiled PHP template${NC}"
+		;;
 	 
 	*)
 		echo -e "\n\tCopies boilerplates from ${cyan}$HTTP/_libs${NC}"
