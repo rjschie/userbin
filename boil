@@ -9,14 +9,14 @@ NC='\033[0m' # No Color
 case "$1" in
 	angular)
 		shopt -s dotglob
-		sudo cp -an /Users/ryanschie/_Web/http/_libs/angular/angular-boilerplate/* `pwd`
+		sudo cp -an /Users/ryanschie/_Web/http/_libs/_boilerplates/angular-boilerplate/* `pwd`
 		shopt -u dotglob
 		sudo rm -R ".git"
 		echo -e "${green}Boiled Angular template${NC}"
 		;;
 	 
 	api)
-		sudo cp -an /Users/ryanschie/_Web/http/_libs/laravel/laravel-api `pwd`
+		sudo cp -an /Users/ryanschie/_Web/http/_libs/_boilerplates/laravel-api `pwd`
 		sudo mv laravel-api api
 		sudo rm -R "./api/.git"
 		sudo rm "./api/.gitignore"
@@ -25,7 +25,7 @@ case "$1" in
 
 	php)
 		shopt -s dotglob
-		sudo cp -an /Users/ryanschie/_Web/http/_libs/general/php-boilerplate/* `pwd`
+		sudo cp -an /Users/ryanschie/_Web/http/_libs/_boilerplates/php-boilerplate/* `pwd`
 		shopt -u dotglob
 		echo -e "${green}Boiled PHP template${NC}"
 		;;
