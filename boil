@@ -29,10 +29,17 @@ case "$1" in
 		shopt -u dotglob
 		echo -e "${green}Boiled PHP template${NC}"
 		;;
+
+	general)
+		shopt -s dotglob
+		sudo cp -an /Users/ryanschie/_Web/http/_libs/_boilerplates/general-boilerplate/* `pwd`
+		shopt -u dotglob
+		echo -e "${green}Boiled General template${NC}"
+		;;
 	 
 	*)
 		echo -e "\n\tCopies boilerplates from ${cyan}$HTTP/_libs${NC}"
-		echo -e "\tUsage: { ${green}angular${NC} | ${green}api${NC} }\n"
+		echo -e "\tUsage: { ${green}general${NC} | ${green}angular${NC} | ${green}api${NC} | ${green}php${NC} }\n"
 		exit 1
 
 esac
