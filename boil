@@ -22,6 +22,14 @@ case "$1" in
 		sudo rm "./api/.gitignore"
 		echo -e "${green}Boiled API template${NC}"
 		;;
+	 
+	lumen)
+		sudo cp -an /Users/ryanschie/_Web/http/_libs/_boilerplates/lumen-api `pwd`
+		sudo mv lumen-api api
+		sudo rm -R "./api/.git"
+		sudo rm "./api/.gitignore"
+		echo -e "${green}Boiled Lumen template${NC}"
+		;;
 
 	php)
 		shopt -s dotglob
